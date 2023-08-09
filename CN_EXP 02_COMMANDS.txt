@@ -1,0 +1,227 @@
+C:\Users\admin>cd\
+
+C:\>cd mrudul
+
+C:\mrudul>ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::4e54:3b80:9d6f:f68b%11
+   IPv4 Address. . . . . . . . . . . : 192.168.12.140
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.12.1
+
+Wireless LAN adapter Wi-Fi:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : mshome.net
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 10:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+C:\mrudul>systeminfo
+
+Host Name:                 LAB0515
+OS Name:                   Microsoft Windows 11 Pro
+OS Version:                10.0.22621 N/A Build 22621
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Standalone Workstation
+OS Build Type:             Multiprocessor Free
+Registered Owner:          admin
+Registered Organization:
+Product ID:                00331-20000-00000-AA208
+Original Install Date:     2/22/2023, 9:21:05 AM
+System Boot Time:          7/26/2023, 10:00:16 AM
+System Manufacturer:       HP
+System Model:              HP 280 Pro G5 Small Form Factor PC
+System Type:               x64-based PC
+Processor(s):              1 Processor(s) Installed.
+                           [01]: Intel64 Family 6 Model 165 Stepping 3 GenuineIntel ~3096 Mhz
+BIOS Version:              AMI F.28, 2/20/2023
+Windows Directory:         C:\WINDOWS
+System Directory:          C:\WINDOWS\system32
+Boot Device:               \Device\HarddiskVolume1
+System Locale:             en-us;English (United States)
+Input Locale:              en-us;English (United States)
+Time Zone:                 (UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi
+Total Physical Memory:     7,903 MB
+Available Physical Memory: 3,927 MB
+Virtual Memory: Max Size:  9,247 MB
+Virtual Memory: Available: 5,152 MB
+Virtual Memory: In Use:    4,095 MB
+Page File Location(s):     C:\pagefile.sys
+Domain:                    LAB05
+Logon Server:              \\LAB0515
+Hotfix(s):                 4 Hotfix(s) Installed.
+                           [01]: KB5028851
+                           [02]: KB5012170
+                           [03]: KB5028185
+                           [04]: KB5028320
+Network Card(s):           2 NIC(s) Installed.
+                           [01]: Realtek RTL8821CE 802.11ac PCIe Adapter
+                                 Connection Name: Wi-Fi
+                                 Status:          Media disconnected
+                           [02]: Realtek PCIe GbE Family Controller
+                                 Connection Name: Ethernet
+                                 DHCP Enabled:    No
+                                 IP address(es)
+                                 [01]: 192.168.12.140
+                                 [02]: fe80::4e54:3b80:9d6f:f68b
+Hyper-V Requirements:      VM Monitor Mode Extensions: Yes
+                           Virtualization Enabled In Firmware: Yes
+                           Second Level Address Translation: Yes
+                           Data Execution Prevention Available: Yes
+
+C:\mrudul>nslookup
+DNS request timed out.
+    timeout was 2 seconds.
+Default Server:  UnKnown
+Address:  192.168.0.1
+
+> exit
+
+C:\mrudul>hostname
+lab0515
+
+C:\mrudul>ping
+
+Usage: ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]
+            [-r count] [-s count] [[-j host-list] | [-k host-list]]
+            [-w timeout] [-R] [-S srcaddr] [-c compartment] [-p]
+            [-4] [-6] target_name
+
+Options:
+    -t             Ping the specified host until stopped.
+                   To see statistics and continue - type Control-Break;
+                   To stop - type Control-C.
+    -a             Resolve addresses to hostnames.
+    -n count       Number of echo requests to send.
+    -l size        Send buffer size.
+    -f             Set Don't Fragment flag in packet (IPv4-only).
+    -i TTL         Time To Live.
+    -v TOS         Type Of Service (IPv4-only. This setting has been deprecated
+                   and has no effect on the type of service field in the IP
+                   Header).
+    -r count       Record route for count hops (IPv4-only).
+    -s count       Timestamp for count hops (IPv4-only).
+    -j host-list   Loose source route along host-list (IPv4-only).
+    -k host-list   Strict source route along host-list (IPv4-only).
+    -w timeout     Timeout in milliseconds to wait for each reply.
+    -R             Use routing header to test reverse route also (IPv6-only).
+                   Per RFC 5095 the use of this routing header has been
+                   deprecated. Some systems may drop echo requests if
+                   this header is used.
+    -S srcaddr     Source address to use.
+    -c compartment Routing compartment identifier.
+    -p             Ping a Hyper-V Network Virtualization provider address.
+    -4             Force using IPv4.
+    -6             Force using IPv6.
+
+
+C:\mrudul>tracert
+
+Usage: tracert [-d] [-h maximum_hops] [-j host-list] [-w timeout]
+               [-R] [-S srcaddr] [-4] [-6] target_name
+
+Options:
+    -d                 Do not resolve addresses to hostnames.
+    -h maximum_hops    Maximum number of hops to search for target.
+    -j host-list       Loose source route along host-list (IPv4-only).
+    -w timeout         Wait timeout milliseconds for each reply.
+    -R                 Trace round-trip path (IPv6-only).
+    -S srcaddr         Source address to use (IPv6-only).
+    -4                 Force using IPv4.
+    -6                 Force using IPv6.
+
+C:\mrudul>arp
+
+Displays and modifies the IP-to-Physical address translation tables used by
+address resolution protocol (ARP).
+
+ARP -s inet_addr eth_addr [if_addr]
+ARP -d inet_addr [if_addr]
+ARP -a [inet_addr] [-N if_addr] [-v]
+
+  -a            Displays current ARP entries by interrogating the current
+                protocol data.  If inet_addr is specified, the IP and Physical
+                addresses for only the specified computer are displayed.  If
+                more than one network interface uses ARP, entries for each ARP
+                table are displayed.
+  -g            Same as -a.
+  -v            Displays current ARP entries in verbose mode.  All invalid
+                entries and entries on the loop-back interface will be shown.
+  inet_addr     Specifies an internet address.
+  -N if_addr    Displays the ARP entries for the network interface specified
+                by if_addr.
+  -d            Deletes the host specified by inet_addr. inet_addr may be
+                wildcarded with * to delete all hosts.
+  -s            Adds the host and associates the Internet address inet_addr
+                with the Physical address eth_addr.  The Physical address is
+                given as 6 hexadecimal bytes separated by hyphens. The entry
+                is permanent.
+  eth_addr      Specifies a physical address.
+  if_addr       If present, this specifies the Internet address of the
+                interface whose address translation table should be modified.
+                If not present, the first applicable interface will be used.
+Example:
+  > arp -s 157.55.85.212   00-aa-00-62-c6-09  .... Adds a static entry.
+  > arp -a                                    .... Displays the arp table.
+
+C:\mrudul>netstat
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State
+  TCP    127.0.0.1:49955        lab0515:49956          ESTABLISHED
+  TCP    127.0.0.1:49956        lab0515:49955          ESTABLISHED
+  TCP    127.0.0.1:49957        lab0515:49968          ESTABLISHED
+  TCP    127.0.0.1:49968        lab0515:49957          ESTABLISHED
+  TCP    192.168.12.140:7680    192.168.10.135:59267   TIME_WAIT
+  TCP    192.168.12.140:50059   103.157.178.200:https  CLOSE_WAIT
+  TCP    192.168.12.140:50077   20.24.121.134:https    CLOSE_WAIT
+  TCP    192.168.12.140:50078   20.24.121.134:https    CLOSE_WAIT
+  TCP    192.168.12.140:50079   20.24.121.134:https    CLOSE_WAIT
+  TCP    192.168.12.140:50080   20.24.121.134:https    CLOSE_WAIT
+  TCP    192.168.12.140:50081   20.24.121.134:https    CLOSE_WAIT
+  TCP    192.168.12.140:50088   20.198.118.190:https   ESTABLISHED
+  TCP    192.168.12.140:50090   a-0001:https           TIME_WAIT
+  TCP    192.168.12.140:50091   20.140.147.201:https   ESTABLISHED
+  TCP    192.168.12.140:50094   CO-138:icslap          TIME_WAIT
+  TCP    192.168.12.140:50101   152.195.38.76:http     CLOSE_WAIT
+  TCP    192.168.12.140:50102   a-0001:https           ESTABLISHED
+  TCP    192.168.12.140:50103   131.253.33.254:https   ESTABLISHED
+  TCP    192.168.12.140:50104   52.123.128.254:https   ESTABLISHED
+  TCP    192.168.12.140:50105   13.107.6.163:https     ESTABLISHED
+  TCP    192.168.12.140:50106   ec2-15-207-81-200:8080  CLOSE_WAIT
+  TCP    192.168.12.140:50107   13.107.246.48:https    ESTABLISHED
+  TCP    192.168.12.140:50108   ec2-15-207-81-200:8080  CLOSE_WAIT
+  TCP    192.168.12.140:50109   13.107.246.254:https   ESTABLISHED
+  TCP    192.168.12.140:50110   52.113.196.254:https   ESTABLISHED
+  TCP    192.168.12.140:50111   152.199.43.62:https    ESTABLISHED
+  TCP    192.168.12.140:50112   204.79.197.222:https   ESTABLISHED
+  TCP    192.168.12.140:50113   13.107.234.254:https   ESTABLISHED
+  TCP    192.168.12.140:50114   a23-212-254-123:https  ESTABLISHED
+  TCP    192.168.12.140:50115   a23-212-254-123:https  CLOSE_WAIT
+  TCP    192.168.12.140:50116   20.106.86.13:https     TIME_WAIT
+  TCP    192.168.12.140:50119   52.165.165.26:https    TIME_WAIT
+  TCP    192.168.12.140:50120   20.43.150.84:https     TIME_WAIT
+  TCP    192.168.12.140:50122   52.165.164.15:https    TIME_WAIT
+  TCP    192.168.12.140:50123   51.11.192.48:https     TIME_WAIT
+  TCP    192.168.12.140:50124   20.205.115.102:https   ESTABLISHED
+  TCP    192.168.12.140:50125   a23-221-33-41:https    ESTABLISHED
+  TCP    192.168.12.140:50127   52.168.112.66:https    ESTABLISHED
+  TCP    192.168.12.140:50128   20.190.145.171:https   ESTABLISHED
+  TCP    192.168.12.140:50129   20.42.65.88:https      TIME_WAIT
+  TCP    192.168.12.140:50131   20.42.65.88:https      TIME_WAIT
+  TCP    192.168.12.140:50133   52.182.143.208:https   TIME_WAIT
